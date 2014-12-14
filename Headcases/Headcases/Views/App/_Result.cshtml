@@ -1,18 +1,15 @@
 ﻿@model Headcases.Models.Result
 @{
     var perc = (Model.Probability * 100);
-    var style = "progress-bar-warning";
-    if (perc > 70)
+    var style = "progress-bar-danger";
+    if (Model.Survived)
     {
         style = "progress-bar-success";
-    } else if (perc < 30) {
-        style = "progress-bar-danger";
     }
 }
 <div class="progress">
     <div class="progress-bar @style progress-bar-striped" role="progressbar" aria-valuenow="@perc" aria-valuemin="0" aria-valuemax="100" style="width: @perc%">
-        <span class="sr-only">@perc% Chance</span>
     </div>
 </div>
 
-@Model.Survived
+<p style="text-align:center;"><strong>@perc.ToString("0.##")% Chance of Survival</strong></p>
