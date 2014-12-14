@@ -1,7 +1,68 @@
 ﻿@{
     ViewBag.Title = "About";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+<div class="jumbotron slide" id="slide-1">
+    <h1>
+        @Html.Partial("_Brain")
+        HeadCases
+    </h1>
+    <p class="lead">Head trauma triage using historical data.</p>
+    <h2>
+        Source Code
+    </h2>
+    <p>The source code for this site and some of the R and Python code used can be found on our GitHub.</p>
+    <p>
+        <a href="https://github.com/HeadCases" class="btn btn-default btn-lg">github.com/HeadCases</a>
+    </p>
+    <p>Here are some other resources.</p>
+    <p>
+        <a href="https://ussouthcentral.services.azureml.net/workspaces/ca8deb48055a434a88228b6f40e36866/services/493e73bb94264df7991a36231eb5375a/score/help" class="btn btn-default">API Reference</a>
+    </p>
+    <p><a href="#slide-2" class="btn btn-primary btn-lg btn-next-slide">▼</a></p>
+</div>
+<div class="slide" id="slide-2">
+    <h1>
+        The Projects
+    </h1>
+    <p class="lead">We used the CRASH Head Injury dataset.</p>
+    <p>
+        <ul>
+            <li>Auto-Triage</li>
+            <li>Chance of Survival</li>
+        </ul>
+    </p>
+    <p class="lead">As well as the Physionet ICU dataset.</p>
+    <p>
+        <ul>
+            <li>Comparisons of Different ICU Patients</li>
+        </ul>
+    </p>
+    <p><a href="#slide-3" class="btn btn-primary btn-lg btn-next-slide">▼</a></p>
+</div>
+<div class="slide" id="slide-3">
+    <h1>
+        Auto-Triage
+    </h1>
+    <img src="~/Content/img/autotriage.png" style="max-height:100%;max-width:100%;" />
+    <p><a href="#slide-4" class="btn btn-primary btn-lg btn-next-slide">▼</a></p>
+</div>
+<div class="slide" id="slide-4">
+    <h1>
+        Chance of Survival
+    </h1>
+    
+    <img src="~/Content/img/tree.png" />
+    <img src="~/Content/img/graph.png" />
+    <p><a href="#slide-5" class="btn btn-primary btn-lg btn-next-slide">▼</a></p>
+</div>
+<div class="slide" id="slide-5">
+    
+    <h1>
+        Comparisons of Different ICU Patients
+    </h1>
+    <img src="~/Content/img/HR.png" style="width:50%; max-height:100%; float:left;" />
+    <img src="~/Content/img/Temp.png" style="width:50%; max-height:100%; float:left;" />
+
+    <p style="clear:both;"><a href="#slide-1" class="btn btn-primary btn-lg btn-next-slide">▲</a></p>
+</div>

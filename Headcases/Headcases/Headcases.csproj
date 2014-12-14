@@ -155,8 +155,13 @@
     <Content Include="Content\favicon\mstile-310x150.png" />
     <Content Include="Content\favicon\mstile-310x310.png" />
     <Content Include="Content\favicon\mstile-70x70.png" />
+    <Content Include="Content\img\autotriage.png" />
     <Content Include="Content\img\brain.png" />
     <Content Include="Content\img\brain.svg" />
+    <Content Include="Content\img\graph.png" />
+    <Content Include="Content\img\HR.png" />
+    <Content Include="Content\img\Temp.png" />
+    <Content Include="Content\img\tree.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -198,7 +203,6 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_Brain.cshtml" />
     <Content Include="Views\App\Index.cshtml" />

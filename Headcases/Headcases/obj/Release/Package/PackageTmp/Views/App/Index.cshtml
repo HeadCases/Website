@@ -4,59 +4,64 @@
     ViewBag.Title = "App";
 }
 
+<h2>Conditions</h2>
+<hr />
 
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-7 col-lg-12 col-lg-offset-0 result">
+    </div>
+</div>
 
 @using (Html.BeginForm("Predict", "App")) 
 {
     @Html.AntiForgeryToken()
     
-    <div class="form-horizontal">
-        <h2>Conditions</h2>
-        <hr />
+    <div class="form-horizontal col-lg-6">
+        
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.AGE, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.AGE, htmlAttributes: new { @class = "control-label col-md-5" })
+            <div class="col-md-7">
                 @Html.EditorFor(model => model.AGE, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.AGE, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.MINS_SINCE_INJURY, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.MINS_SINCE_INJURY, htmlAttributes: new { @class = "control-label col-md-5" })
+            <div class="col-md-7">
                 @Html.EditorFor(model => model.MINS_SINCE_INJURY, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.MINS_SINCE_INJURY, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.GCS_EYE, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.GCS_EYE, htmlAttributes: new { @class = "control-label col-md-5" })
+            <div class="col-md-7">
                 @Html.EnumDropDownListFor(model => model.GCS_EYE, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.GCS_EYE, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.GCS_MOTOR, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.GCS_MOTOR, htmlAttributes: new { @class = "control-label col-md-5" })
+            <div class="col-md-7">
                 @Html.EnumDropDownListFor(model => model.GCS_MOTOR, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.GCS_MOTOR, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.GCS_VERBAL, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.GCS_VERBAL, htmlAttributes: new { @class = "control-label col-md-5" })
+            <div class="col-md-7">
                 @Html.EnumDropDownListFor(model => model.GCS_VERBAL, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.GCS_VERBAL, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.PUPIL_REACT_LEFT, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.PUPIL_REACT_LEFT, htmlAttributes: new { @class = "control-label col-md-5" })
+            <div class="col-md-7">
                 @Html.EnumDropDownListFor(model => model.PUPIL_REACT_LEFT, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.PUPIL_REACT_LEFT, "", new { @class = "text-danger" })
             </div>
@@ -64,24 +69,24 @@
 
 
         <div class="form-group">
-            @Html.LabelFor(model => model.PUPIL_REACT_RIGHT, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.PUPIL_REACT_RIGHT, htmlAttributes: new { @class = "control-label col-md-5" })
+            <div class="col-md-7">
                 @Html.EnumDropDownListFor(model => model.PUPIL_REACT_RIGHT, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.PUPIL_REACT_RIGHT, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.EO_Cause, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.EO_Cause, htmlAttributes: new { @class = "control-label col-md-5" })
+            <div class="col-md-7">
                 @Html.EnumDropDownListFor(model => model.EO_Cause, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.EO_Cause, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.EO_Days_ICU, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.EO_Days_ICU, htmlAttributes: new { @class = "control-label col-md-5" })
+            <div class="col-md-7">
                 @Html.EditorFor(model => model.EO_Days_ICU, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.EO_Days_ICU, "", new { @class = "text-danger" })
             </div>
@@ -89,123 +94,126 @@
         @Html.HiddenFor(x => x.Outcome)
         
         <div class="form-group">
-            @Html.LabelFor(model => model.EO_Seizure, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.EO_Seizure, htmlAttributes: new { @class = "control-label col-md-5" })
+            <div class="col-md-7">
                 @Html.EnumDropDownListFor(model => model.EO_Seizure, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.EO_Seizure, "", new { @class = "text-danger" })
             </div>
         </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.EO_Haem_or_Mel, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EnumDropDownListFor(model => model.EO_Haem_or_Mel, new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.EO_Haem_or_Mel, "", new { @class = "text-danger" })
-            </div>
         </div>
+        <div class="form-horizontal col-lg-6">
 
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.EO_Wound_infection, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EnumDropDownListFor(model => model.EO_Wound_infection, new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.EO_Wound_infection, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.EO_Pneumonia_TWAB, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EnumDropDownListFor(model => model.EO_Pneumonia_TWAB, new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.EO_Pneumonia_TWAB, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.EO_Other_TWAB, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EnumDropDownListFor(model => model.EO_Other_TWAB, new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.EO_Other_TWAB, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.EO_Neurosurgical, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EnumDropDownListFor(model => model.EO_Neurosurgical, new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.EO_Neurosurgical, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.EO_Major_EC_injury, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EnumDropDownListFor(model => model.EO_Major_EC_injury, new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.EO_Major_EC_injury, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.EO_1_or_more_PH, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EnumDropDownListFor(model => model.EO_1_or_more_PH, new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.EO_1_or_more_PH, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.EO_Obliteration_3rdVorBC, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EnumDropDownListFor(model => model.EO_Obliteration_3rdVorBC, new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.EO_Obliteration_3rdVorBC, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.EO_Subarachnoid_bleed, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EnumDropDownListFor(model => model.EO_Subarachnoid_bleed, new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.EO_Subarachnoid_bleed, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.EO_Midline_shift_gt_5mm, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EnumDropDownListFor(model => model.EO_Midline_shift_gt_5mm, new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.EO_Midline_shift_gt_5mm, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Continue &raquo;" class="btn  btn-primary  btn-go" data-loading-text="Please wait..." />
-            </div>
-        </div>
-
-        <div class="form-group" id="result">
-
+            <div class="form-group">
+                @Html.LabelFor(model => model.EO_Haem_or_Mel, htmlAttributes: new { @class = "control-label col-md-5" })
+                <div class="col-md-7">
+                    @Html.EnumDropDownListFor(model => model.EO_Haem_or_Mel, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.EO_Haem_or_Mel, "", new { @class = "text-danger" })
+                </div>
             </div>
 
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.EO_Wound_infection, htmlAttributes: new { @class = "control-label col-md-5" })
+                <div class="col-md-7">
+                    @Html.EnumDropDownListFor(model => model.EO_Wound_infection, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.EO_Wound_infection, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.EO_Pneumonia_TWAB, htmlAttributes: new { @class = "control-label col-md-5" })
+                <div class="col-md-7">
+                    @Html.EnumDropDownListFor(model => model.EO_Pneumonia_TWAB, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.EO_Pneumonia_TWAB, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.EO_Other_TWAB, htmlAttributes: new { @class = "control-label col-md-5" })
+                <div class="col-md-7">
+                    @Html.EnumDropDownListFor(model => model.EO_Other_TWAB, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.EO_Other_TWAB, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.EO_Neurosurgical, htmlAttributes: new { @class = "control-label col-md-5" })
+                <div class="col-md-7">
+                    @Html.EnumDropDownListFor(model => model.EO_Neurosurgical, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.EO_Neurosurgical, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.EO_Major_EC_injury, htmlAttributes: new { @class = "control-label col-md-5" })
+                <div class="col-md-7">
+                    @Html.EnumDropDownListFor(model => model.EO_Major_EC_injury, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.EO_Major_EC_injury, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.EO_1_or_more_PH, htmlAttributes: new { @class = "control-label col-md-5" })
+                <div class="col-md-7">
+                    @Html.EnumDropDownListFor(model => model.EO_1_or_more_PH, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.EO_1_or_more_PH, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.EO_Obliteration_3rdVorBC, htmlAttributes: new { @class = "control-label col-md-5" })
+                <div class="col-md-7">
+                    @Html.EnumDropDownListFor(model => model.EO_Obliteration_3rdVorBC, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.EO_Obliteration_3rdVorBC, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.EO_Subarachnoid_bleed, htmlAttributes: new { @class = "control-label col-md-5" })
+                <div class="col-md-7">
+                    @Html.EnumDropDownListFor(model => model.EO_Subarachnoid_bleed, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.EO_Subarachnoid_bleed, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.EO_Midline_shift_gt_5mm, htmlAttributes: new { @class = "control-label col-md-5" })
+                <div class="col-md-7">
+                    @Html.EnumDropDownListFor(model => model.EO_Midline_shift_gt_5mm, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.EO_Midline_shift_gt_5mm, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-7">
+                    <input type="submit" value="Continue &raquo;" class="btn  btn-primary  btn-go" data-loading-text="Please wait..." />
+                </div>
+            </div>
         </div>
 }
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-7 col-lg-12 col-lg-offset-0 result">
+    </div>
+</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 
     <script>
         $("form").submit(function (ev) {
-            $(".btn-go").button("loading");
-            $(result).html("");
-            ev.preventDefault();
-            $.post($(this).attr("action"), $(this).serialize(), function (data) {
-                $(result).html(data);
-                $(".btn-go").button("reset");
-            });
+            if (!ev.isDefaultPrevented()) {
+                $(".btn-go").button("loading");
+                $(".result").html("");
+                ev.preventDefault();
+                $.post($(this).attr("action"), $(this).serialize(), function (data) {
+                    $(".result").html(data);
+                    $(".btn-go").button("reset");
+                });
+            }
         });
     </script>
 }
